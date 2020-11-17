@@ -67,6 +67,15 @@ Simple way
 bash build.sh
 ```
 
+## Using Docker for build
+**On host:** 
+- `docker build -t blankon-live-build:verbeek .`
+- `docker run --rm -ti --cap-add sys_admin -v $(pwd):/src blankon-live-build:verbeek bash`
+**Inside docker container:** 
+- `lb clean --purge`
+- `lb config`
+- `lb build`
+
 ## TODO
 
 Notification to blankon-dev mailing list (need SMTP server).
